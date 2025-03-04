@@ -36,19 +36,19 @@ Q - Quit the program");
                         Helpers.GetGames();
                         break;
                     case "a":
-                        gameEngine.AdditionGame("Addition game");
+                        gameEngine.PlayGame(GameType.Addition, "Addition game");
                         break;
                     case "s":
-                        gameEngine.SubtractionGame("Subtraction game");
+                        gameEngine.PlayGame(GameType.Subtraction, "Subtraction game");
                         break;
                     case "m":
-                        gameEngine.MultiplicationGame("Multiplication game");
+                        gameEngine.PlayGame(GameType.Multiplication, "Multiplication game");
                         break;
                     case "d":
-                        gameEngine.DivisionGame("Division game");
+                        gameEngine.PlayGame(GameType.Division, "Division game");
                         break;
                     case "r":
-                        gameEngine.RandomGame("Random game");
+                        gameEngine.PlayGame(GameType.Random, "Random game");
                         break;
                     case "q":
                         Console.WriteLine("Goodbye");
