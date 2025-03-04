@@ -15,7 +15,7 @@ namespace MathGame
             {
                 foreach (var game in games)
                 {
-                    Console.WriteLine($"{game.Date} - {game.Type}: {game.Score}pts in {game.Difficulty} difficulty.");
+                    Console.WriteLine($"{game.Date} - {game.Type}: {game.Score}pts on {game.Difficulty} difficulty in {game.Duration} seconds.");
                 }
             } else
             {
@@ -27,14 +27,15 @@ namespace MathGame
         }
 
 
-        internal static void AddToHistory(int gameScore, GameType gameType, GameDifficulty difficulty)
+        internal static void AddToHistory(int gameScore, GameType gameType, GameDifficulty difficulty, string duration)
         {
             games.Add(new Game
             {
                 Date = DateTime.UtcNow,
                 Score = gameScore,
                 Type = gameType,
-                Difficulty = difficulty
+                Difficulty = difficulty,
+                Duration = duration
             });
         }
 

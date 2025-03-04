@@ -6,6 +6,7 @@
         public int Score { get; set; }
         public GameType Type { get; set; }
         public GameDifficulty Difficulty { get; set; }
+        public string Duration { get; set; } = "0";
     }
 }
 
@@ -14,7 +15,8 @@ internal enum GameType
     Addition,
     Subtraction,
     Multiplication,
-    Division
+    Division,
+    Random
 }
 
 internal enum GameDifficulty
